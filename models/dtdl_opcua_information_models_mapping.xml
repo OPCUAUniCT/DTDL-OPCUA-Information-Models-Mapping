@@ -1,0 +1,843 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UANodeSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uax="http://opcfoundation.org/UA/2008/02/Types.xsd" xmlns="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:s1="http://unict.org/DTDL/Types.xsd" xmlns:ua="http://unifiedautomation.com/Configuration/NodeSet.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <NamespaceUris>
+        <Uri>http://unict.org/DTDL/</Uri>
+    </NamespaceUris>
+    <Models>
+        <Model ModelUri="http://unict.org/DTDL/" PublicationDate="2023-02-01T11:07:40Z" Version="1.0.0">
+            <RequiredModel ModelUri="http://opcfoundation.org/UA/" PublicationDate="2022-11-01T00:00:00Z" Version="1.05.02"/>
+        </Model>
+    </Models>
+    <Aliases>
+        <Alias Alias="Boolean">i=1</Alias>
+        <Alias Alias="Int16">i=4</Alias>
+        <Alias Alias="String">i=12</Alias>
+        <Alias Alias="DateTime">i=13</Alias>
+        <Alias Alias="NodeId">i=17</Alias>
+        <Alias Alias="Organizes">i=35</Alias>
+        <Alias Alias="HasModellingRule">i=37</Alias>
+        <Alias Alias="HasTypeDefinition">i=40</Alias>
+        <Alias Alias="HasSubtype">i=45</Alias>
+        <Alias Alias="HasProperty">i=46</Alias>
+        <Alias Alias="HasComponent">i=47</Alias>
+        <Alias Alias="IdType">i=256</Alias>
+        <Alias Alias="NumericRange">i=291</Alias>
+        <Alias Alias="HasAddIn">i=17604</Alias>
+        <Alias Alias="DTDLHasTarget">ns=1;i=4002</Alias>
+        <Alias Alias="DTDLHasSchema">ns=1;i=4003</Alias>
+    </Aliases>
+    <Extensions>
+        <Extension>
+            <ua:ModelInfo Tool="UaModeler" Hash="X2acElLfAAvW3v03499s1Q==" Version="1.6.8"/>
+        </Extension>
+    </Extensions>
+    <UAReferenceType NodeId="ns=1;i=4003" BrowseName="1:DTDLHasSchema">
+        <DisplayName>DTDLHasSchema</DisplayName>
+        <References>
+            <Reference ReferenceType="HasSubtype" IsForward="false">i=47</Reference>
+        </References>
+        <InverseName>DTDLSchemaOf</InverseName>
+    </UAReferenceType>
+    <UAReferenceType NodeId="ns=1;i=4002" BrowseName="1:DTDLHasTarget">
+        <DisplayName>DTDLHasTarget</DisplayName>
+        <References>
+            <Reference ReferenceType="HasSubtype" IsForward="false">i=34</Reference>
+        </References>
+        <InverseName>DTDLTargetOf</InverseName>
+    </UAReferenceType>
+    <UAVariableType ValueRank="-2" NodeId="ns=1;i=2002" BrowseName="1:DTDLPropertyType">
+        <DisplayName>DTDLPropertyType</DisplayName>
+        <References>
+            <Reference ReferenceType="HasProperty">ns=1;i=6009</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6010</Reference>
+            <Reference ReferenceType="HasSubtype" IsForward="false">i=63</Reference>
+        </References>
+    </UAVariableType>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=2002" NodeId="ns=1;i=6009" BrowseName="1:Comment" AccessLevel="3">
+        <DisplayName>Comment</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasModellingRule">i=80</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=2002</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=2002" NodeId="ns=1;i=6010" BrowseName="1:Unit" AccessLevel="3">
+        <DisplayName>Unit</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasModellingRule">i=80</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=2002</Reference>
+        </References>
+    </UAVariable>
+    <UAObjectType NodeId="ns=1;i=1002" BrowseName="1:DTDLCommandType">
+        <DisplayName>DTDLCommandType</DisplayName>
+        <References>
+            <Reference ReferenceType="HasComponent">ns=1;i=7001</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6001</Reference>
+            <Reference ReferenceType="HasSubtype" IsForward="false">i=58</Reference>
+        </References>
+    </UAObjectType>
+    <UAMethod ParentNodeId="ns=1;i=1002" NodeId="ns=1;i=7001" BrowseName="1:Command">
+        <DisplayName>Command</DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=80</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1002</Reference>
+        </References>
+    </UAMethod>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=1002" NodeId="ns=1;i=6001" BrowseName="1:Comment" AccessLevel="3">
+        <DisplayName>Comment</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasModellingRule">i=80</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=1002</Reference>
+        </References>
+    </UAVariable>
+    <UAObjectType NodeId="ns=1;i=1003" BrowseName="1:DTDLComponentType">
+        <DisplayName>DTDLComponentType</DisplayName>
+        <References>
+            <Reference ReferenceType="HasProperty">ns=1;i=6002</Reference>
+            <Reference ReferenceType="DTDLHasSchema">ns=1;i=5001</Reference>
+            <Reference ReferenceType="HasSubtype" IsForward="false">i=58</Reference>
+        </References>
+    </UAObjectType>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=1003" NodeId="ns=1;i=6002" BrowseName="1:Comment" AccessLevel="3">
+        <DisplayName>Comment</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasModellingRule">i=80</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=1003</Reference>
+        </References>
+    </UAVariable>
+    <UAObject ParentNodeId="ns=1;i=1003" NodeId="ns=1;i=5001" BrowseName="1:ComponentSchema">
+        <DisplayName>ComponentSchema</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=1006</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5011</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5041</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5052</Reference>
+            <Reference ReferenceType="DTDLHasSchema" IsForward="false">ns=1;i=1003</Reference>
+        </References>
+    </UAObject>
+    <UAObject ParentNodeId="ns=1;i=5001" NodeId="ns=1;i=5011" BrowseName="1:Contents">
+        <DisplayName>Contents</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=1007</Reference>
+            <Reference ReferenceType="Organizes">ns=1;i=5026</Reference>
+            <Reference ReferenceType="Organizes">ns=1;i=5032</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="Organizes">ns=1;i=5038</Reference>
+            <Reference ReferenceType="Organizes">ns=1;i=5039</Reference>
+            <Reference ReferenceType="Organizes">ns=1;i=5040</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5001</Reference>
+        </References>
+    </UAObject>
+    <UAObject ParentNodeId="ns=1;i=5011" NodeId="ns=1;i=5026" BrowseName="1:Commands">
+        <DisplayName>Commands</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=5011</Reference>
+        </References>
+    </UAObject>
+    <UAObject ParentNodeId="ns=1;i=5011" NodeId="ns=1;i=5032" BrowseName="1:Components">
+        <DisplayName>Components</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=5011</Reference>
+        </References>
+    </UAObject>
+    <UAObject ParentNodeId="ns=1;i=5011" NodeId="ns=1;i=5038" BrowseName="1:Properties">
+        <DisplayName>Properties</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=5011</Reference>
+        </References>
+    </UAObject>
+    <UAObject ParentNodeId="ns=1;i=5011" NodeId="ns=1;i=5039" BrowseName="1:Relationships">
+        <DisplayName>Relationships</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=5011</Reference>
+        </References>
+    </UAObject>
+    <UAObject ParentNodeId="ns=1;i=5011" NodeId="ns=1;i=5040" BrowseName="1:Telemetries">
+        <DisplayName>Telemetries</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=5011</Reference>
+        </References>
+    </UAObject>
+    <UAObject ParentNodeId="ns=1;i=5001" NodeId="ns=1;i=5041" BrowseName="1:Extends">
+        <DisplayName>Extends</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5001</Reference>
+        </References>
+    </UAObject>
+    <UAObject ParentNodeId="ns=1;i=5001" NodeId="ns=1;i=5052" BrowseName="1:Schemas">
+        <DisplayName>Schemas</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5001</Reference>
+        </References>
+    </UAObject>
+    <UAObjectType NodeId="ns=1;i=1006" BrowseName="1:DTDLInterfaceType">
+        <DisplayName>DTDLInterfaceType</DisplayName>
+        <References>
+            <Reference ReferenceType="HasProperty">ns=1;i=6014</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5003</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5020</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5051</Reference>
+            <Reference ReferenceType="HasSubtype" IsForward="false">i=58</Reference>
+            <Reference ReferenceType="DTDLHasTarget" IsForward="false">ns=1;i=1004</Reference>
+        </References>
+    </UAObjectType>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=1006" NodeId="ns=1;i=6014" BrowseName="1:Comment" AccessLevel="3">
+        <DisplayName>Comment</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasModellingRule">i=80</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=1006</Reference>
+        </References>
+    </UAVariable>
+    <UAObject ParentNodeId="ns=1;i=1006" NodeId="ns=1;i=5003" BrowseName="1:Contents">
+        <DisplayName>Contents</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=1007</Reference>
+            <Reference ReferenceType="Organizes">ns=1;i=5015</Reference>
+            <Reference ReferenceType="Organizes">ns=1;i=5016</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="Organizes">ns=1;i=5017</Reference>
+            <Reference ReferenceType="Organizes">ns=1;i=5018</Reference>
+            <Reference ReferenceType="Organizes">ns=1;i=5019</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1006</Reference>
+        </References>
+    </UAObject>
+    <UAObject ParentNodeId="ns=1;i=5003" NodeId="ns=1;i=5015" BrowseName="1:Commands">
+        <DisplayName>Commands</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="Organizes">ns=1;i=5009</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=5003</Reference>
+        </References>
+    </UAObject>
+    <UAObject SymbolicName="Command" ParentNodeId="ns=1;i=5015" NodeId="ns=1;i=5009" BrowseName="1:&lt;Command>">
+        <DisplayName>&lt;Command></DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=1002</Reference>
+            <Reference ReferenceType="HasModellingRule">i=11508</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=5015</Reference>
+        </References>
+    </UAObject>
+    <UAObject ParentNodeId="ns=1;i=5003" NodeId="ns=1;i=5016" BrowseName="1:Components">
+        <DisplayName>Components</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="Organizes">ns=1;i=5010</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=5003</Reference>
+        </References>
+    </UAObject>
+    <UAObject SymbolicName="Component" ParentNodeId="ns=1;i=5016" NodeId="ns=1;i=5010" BrowseName="1:&lt;Component>">
+        <DisplayName>&lt;Component></DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=11508</Reference>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=1003</Reference>
+            <Reference ReferenceType="DTDLHasSchema">ns=1;i=5042</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=5016</Reference>
+        </References>
+    </UAObject>
+    <UAObject ParentNodeId="ns=1;i=5010" NodeId="ns=1;i=5042" BrowseName="1:ComponentSchema">
+        <DisplayName>ComponentSchema</DisplayName>
+        <References>
+            <Reference ReferenceType="HasComponent">ns=1;i=5043</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5044</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=1006</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5056</Reference>
+            <Reference ReferenceType="DTDLHasSchema" IsForward="false">ns=1;i=5010</Reference>
+        </References>
+    </UAObject>
+    <UAObject ParentNodeId="ns=1;i=5042" NodeId="ns=1;i=5043" BrowseName="1:Contents">
+        <DisplayName>Contents</DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=1007</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5042</Reference>
+        </References>
+    </UAObject>
+    <UAObject ParentNodeId="ns=1;i=5042" NodeId="ns=1;i=5044" BrowseName="1:Extends">
+        <DisplayName>Extends</DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5042</Reference>
+        </References>
+    </UAObject>
+    <UAObject ParentNodeId="ns=1;i=5042" NodeId="ns=1;i=5056" BrowseName="1:Schemas">
+        <DisplayName>Schemas</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5042</Reference>
+        </References>
+    </UAObject>
+    <UAObject ParentNodeId="ns=1;i=5003" NodeId="ns=1;i=5017" BrowseName="1:Properties">
+        <DisplayName>Properties</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="Organizes">ns=1;i=6012</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=5003</Reference>
+        </References>
+    </UAObject>
+    <UAVariable SymbolicName="Property" ParentNodeId="ns=1;i=5017" NodeId="ns=1;i=6012" BrowseName="1:&lt;Property>" AccessLevel="3">
+        <DisplayName>&lt;Property></DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=2002</Reference>
+            <Reference ReferenceType="HasModellingRule">i=11508</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=5017</Reference>
+        </References>
+    </UAVariable>
+    <UAObject ParentNodeId="ns=1;i=5003" NodeId="ns=1;i=5018" BrowseName="1:Relationships">
+        <DisplayName>Relationships</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="Organizes">ns=1;i=5012</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=5003</Reference>
+        </References>
+    </UAObject>
+    <UAObject SymbolicName="Relationship" ParentNodeId="ns=1;i=5018" NodeId="ns=1;i=5012" BrowseName="1:&lt;Relationship>">
+        <DisplayName>&lt;Relationship></DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=1004</Reference>
+            <Reference ReferenceType="HasModellingRule">i=11508</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5013</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=5018</Reference>
+        </References>
+    </UAObject>
+    <UAObject ParentNodeId="ns=1;i=5012" NodeId="ns=1;i=5013" BrowseName="1:Properties">
+        <DisplayName>Properties</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5012</Reference>
+        </References>
+    </UAObject>
+    <UAObject ParentNodeId="ns=1;i=5003" NodeId="ns=1;i=5019" BrowseName="1:Telemetries">
+        <DisplayName>Telemetries</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="Organizes">ns=1;i=5014</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=5003</Reference>
+        </References>
+    </UAObject>
+    <UAObject SymbolicName="Telemetry" ParentNodeId="ns=1;i=5019" NodeId="ns=1;i=5014" BrowseName="1:&lt;Telemetry>">
+        <DisplayName>&lt;Telemetry></DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=1005</Reference>
+            <Reference ReferenceType="HasModellingRule">i=11508</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6013</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=5019</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="NodeId" ParentNodeId="ns=1;i=5014" NodeId="ns=1;i=6013" BrowseName="1:Schema" AccessLevel="3">
+        <DisplayName>Schema</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5014</Reference>
+        </References>
+    </UAVariable>
+    <UAObject ParentNodeId="ns=1;i=1006" NodeId="ns=1;i=5020" BrowseName="1:Extends">
+        <DisplayName>Extends</DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasAddIn">ns=1;i=5021</Reference>
+            <Reference ReferenceType="Organizes">ns=1;i=5021</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1006</Reference>
+        </References>
+    </UAObject>
+    <UAObject SymbolicName="AddInInterface" ParentNodeId="ns=1;i=5020" NodeId="ns=1;i=5021" BrowseName="1:&lt;AddInInterface>">
+        <DisplayName>&lt;AddInInterface></DisplayName>
+        <References>
+            <Reference ReferenceType="HasComponent">ns=1;i=5022</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6025</Reference>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=1006</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5030</Reference>
+            <Reference ReferenceType="HasModellingRule">i=11508</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5054</Reference>
+            <Reference ReferenceType="HasAddIn" IsForward="false">ns=1;i=5020</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=5020</Reference>
+        </References>
+    </UAObject>
+    <UAObject ParentNodeId="ns=1;i=5021" NodeId="ns=1;i=5022" BrowseName="1:Contents">
+        <DisplayName>Contents</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=1007</Reference>
+            <Reference ReferenceType="Organizes">ns=1;i=5023</Reference>
+            <Reference ReferenceType="Organizes">ns=1;i=5024</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="Organizes">ns=1;i=5027</Reference>
+            <Reference ReferenceType="Organizes">ns=1;i=5028</Reference>
+            <Reference ReferenceType="Organizes">ns=1;i=5029</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5021</Reference>
+        </References>
+    </UAObject>
+    <UAObject ParentNodeId="ns=1;i=5022" NodeId="ns=1;i=5023" BrowseName="1:Commands">
+        <DisplayName>Commands</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=5022</Reference>
+        </References>
+    </UAObject>
+    <UAObject ParentNodeId="ns=1;i=5022" NodeId="ns=1;i=5024" BrowseName="1:Components">
+        <DisplayName>Components</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5025</Reference>
+            <Reference ReferenceType="Organizes">ns=1;i=5025</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=5022</Reference>
+        </References>
+    </UAObject>
+    <UAObject SymbolicName="Component" ParentNodeId="ns=1;i=5024" NodeId="ns=1;i=5025" BrowseName="1:&lt;Component>">
+        <DisplayName>&lt;Component></DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=1003</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="DTDLHasSchema">ns=1;i=5045</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5024</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=5024</Reference>
+        </References>
+    </UAObject>
+    <UAObject ParentNodeId="ns=1;i=5025" NodeId="ns=1;i=5045" BrowseName="1:ComponentSchema">
+        <DisplayName>ComponentSchema</DisplayName>
+        <References>
+            <Reference ReferenceType="HasComponent">ns=1;i=5046</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5047</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=1006</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5058</Reference>
+            <Reference ReferenceType="DTDLHasSchema" IsForward="false">ns=1;i=5025</Reference>
+        </References>
+    </UAObject>
+    <UAObject ParentNodeId="ns=1;i=5045" NodeId="ns=1;i=5046" BrowseName="1:Contents">
+        <DisplayName>Contents</DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=1007</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5045</Reference>
+        </References>
+    </UAObject>
+    <UAObject ParentNodeId="ns=1;i=5045" NodeId="ns=1;i=5047" BrowseName="1:Extends">
+        <DisplayName>Extends</DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5045</Reference>
+        </References>
+    </UAObject>
+    <UAObject ParentNodeId="ns=1;i=5045" NodeId="ns=1;i=5058" BrowseName="1:Schemas">
+        <DisplayName>Schemas</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5045</Reference>
+        </References>
+    </UAObject>
+    <UAObject ParentNodeId="ns=1;i=5022" NodeId="ns=1;i=5027" BrowseName="1:Properties">
+        <DisplayName>Properties</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=5022</Reference>
+        </References>
+    </UAObject>
+    <UAObject ParentNodeId="ns=1;i=5022" NodeId="ns=1;i=5028" BrowseName="1:Relationships">
+        <DisplayName>Relationships</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=5022</Reference>
+        </References>
+    </UAObject>
+    <UAObject ParentNodeId="ns=1;i=5022" NodeId="ns=1;i=5029" BrowseName="1:Telemetries">
+        <DisplayName>Telemetries</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=5022</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5021" NodeId="ns=1;i=6025" BrowseName="1:DefaultInstanceBrowseName" WriteMask="1" AccessLevel="3">
+        <DisplayName>DefaultInstanceBrowseName</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5021</Reference>
+        </References>
+        <Value>
+            <uax:String>MyFeature</uax:String>
+        </Value>
+    </UAVariable>
+    <UAObject ParentNodeId="ns=1;i=5021" NodeId="ns=1;i=5030" BrowseName="1:Extends">
+        <DisplayName>Extends</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5021</Reference>
+        </References>
+    </UAObject>
+    <UAObject ParentNodeId="ns=1;i=5021" NodeId="ns=1;i=5054" BrowseName="1:Schemas">
+        <DisplayName>Schemas</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5021</Reference>
+        </References>
+    </UAObject>
+    <UAObject ParentNodeId="ns=1;i=1006" NodeId="ns=1;i=5051" BrowseName="1:Schemas">
+        <DisplayName>Schemas</DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="Organizes">ns=1;i=6015</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1006</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="NodeId" ParentNodeId="ns=1;i=5051" NodeId="ns=1;i=6015" BrowseName="1:Schema" AccessLevel="3">
+        <DisplayName>Schema</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasModellingRule">i=11508</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=5051</Reference>
+        </References>
+        <Value>
+            <uax:NodeId>
+                <uax:Identifier>i=0</uax:Identifier>
+            </uax:NodeId>
+        </Value>
+    </UAVariable>
+    <UAObjectType NodeId="ns=1;i=1004" BrowseName="1:DTDLRelationshipType">
+        <DisplayName>DTDLRelationshipType</DisplayName>
+        <References>
+            <Reference ReferenceType="HasProperty">ns=1;i=6003</Reference>
+            <Reference ReferenceType="DTDLHasTarget">ns=1;i=1006</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6004</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6005</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5002</Reference>
+            <Reference ReferenceType="HasSubtype" IsForward="false">i=58</Reference>
+        </References>
+    </UAObjectType>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=1004" NodeId="ns=1;i=6003" BrowseName="1:Comment" AccessLevel="3">
+        <DisplayName>Comment</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasModellingRule">i=80</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=1004</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="Int16" ParentNodeId="ns=1;i=1004" NodeId="ns=1;i=6004" BrowseName="1:MaxMultiplicity" AccessLevel="3">
+        <DisplayName>MaxMultiplicity</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasModellingRule">i=80</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=1004</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="Int16" ParentNodeId="ns=1;i=1004" NodeId="ns=1;i=6005" BrowseName="1:MinMultiplicity" AccessLevel="3">
+        <DisplayName>MinMultiplicity</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasModellingRule">i=80</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=1004</Reference>
+        </References>
+    </UAVariable>
+    <UAObject ParentNodeId="ns=1;i=1004" NodeId="ns=1;i=5002" BrowseName="1:Properties">
+        <DisplayName>Properties</DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="Organizes">ns=1;i=6011</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1004</Reference>
+        </References>
+    </UAObject>
+    <UAVariable SymbolicName="Property" ParentNodeId="ns=1;i=5002" NodeId="ns=1;i=6011" BrowseName="1:&lt;Property>" AccessLevel="3">
+        <DisplayName>&lt;Property></DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=11508</Reference>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=2002</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=5002</Reference>
+        </References>
+    </UAVariable>
+    <UAObjectType NodeId="ns=1;i=1005" BrowseName="1:DTDLTelemetryType">
+        <DisplayName>DTDLTelemetryType</DisplayName>
+        <References>
+            <Reference ReferenceType="HasProperty">ns=1;i=6006</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6007</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6008</Reference>
+            <Reference ReferenceType="HasSubtype" IsForward="false">i=58</Reference>
+        </References>
+    </UAObjectType>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=1005" NodeId="ns=1;i=6006" BrowseName="1:Comment" AccessLevel="3">
+        <DisplayName>Comment</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasModellingRule">i=80</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=1005</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="NodeId" ParentNodeId="ns=1;i=1005" NodeId="ns=1;i=6007" BrowseName="1:Schema" AccessLevel="3">
+        <DisplayName>Schema</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=1005</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=1005" NodeId="ns=1;i=6008" BrowseName="1:Unit" AccessLevel="3">
+        <DisplayName>Unit</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasModellingRule">i=80</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=1005</Reference>
+        </References>
+    </UAVariable>
+    <UAObjectType NodeId="ns=1;i=1007" BrowseName="1:DTDLContents">
+        <DisplayName>DTDLContents</DisplayName>
+        <References>
+            <Reference ReferenceType="Organizes">ns=1;i=5006</Reference>
+            <Reference ReferenceType="Organizes">ns=1;i=5005</Reference>
+            <Reference ReferenceType="Organizes">ns=1;i=5004</Reference>
+            <Reference ReferenceType="Organizes">ns=1;i=5007</Reference>
+            <Reference ReferenceType="Organizes">ns=1;i=5008</Reference>
+            <Reference ReferenceType="HasSubtype" IsForward="false">i=61</Reference>
+        </References>
+    </UAObjectType>
+    <UAObject ParentNodeId="ns=1;i=1007" NodeId="ns=1;i=5006" BrowseName="1:Commands">
+        <DisplayName>Commands</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5033</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1007</Reference>
+        </References>
+    </UAObject>
+    <UAObject SymbolicName="Command" ParentNodeId="ns=1;i=5006" NodeId="ns=1;i=5033" BrowseName="1:&lt;Command>">
+        <DisplayName>&lt;Command></DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=1002</Reference>
+            <Reference ReferenceType="HasModellingRule">i=11508</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5006</Reference>
+        </References>
+    </UAObject>
+    <UAObject ParentNodeId="ns=1;i=1007" NodeId="ns=1;i=5005" BrowseName="1:Components">
+        <DisplayName>Components</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="Organizes">ns=1;i=5031</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1007</Reference>
+        </References>
+    </UAObject>
+    <UAObject SymbolicName="Component" ParentNodeId="ns=1;i=5005" NodeId="ns=1;i=5031" BrowseName="1:&lt;Component>">
+        <DisplayName>&lt;Component></DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=1003</Reference>
+            <Reference ReferenceType="HasModellingRule">i=11508</Reference>
+            <Reference ReferenceType="DTDLHasSchema">ns=1;i=5048</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=5005</Reference>
+        </References>
+    </UAObject>
+    <UAObject ParentNodeId="ns=1;i=5031" NodeId="ns=1;i=5048" BrowseName="1:ComponentSchema">
+        <DisplayName>ComponentSchema</DisplayName>
+        <References>
+            <Reference ReferenceType="HasComponent">ns=1;i=5049</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5050</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=1006</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5060</Reference>
+            <Reference ReferenceType="DTDLHasSchema" IsForward="false">ns=1;i=5031</Reference>
+        </References>
+    </UAObject>
+    <UAObject ParentNodeId="ns=1;i=5048" NodeId="ns=1;i=5049" BrowseName="1:Contents">
+        <DisplayName>Contents</DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=1007</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5048</Reference>
+        </References>
+    </UAObject>
+    <UAObject ParentNodeId="ns=1;i=5048" NodeId="ns=1;i=5050" BrowseName="1:Extends">
+        <DisplayName>Extends</DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5048</Reference>
+        </References>
+    </UAObject>
+    <UAObject ParentNodeId="ns=1;i=5048" NodeId="ns=1;i=5060" BrowseName="1:Schemas">
+        <DisplayName>Schemas</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5048</Reference>
+        </References>
+    </UAObject>
+    <UAObject ParentNodeId="ns=1;i=1007" NodeId="ns=1;i=5004" BrowseName="1:Properties">
+        <DisplayName>Properties</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="Organizes">ns=1;i=6016</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1007</Reference>
+        </References>
+    </UAObject>
+    <UAVariable SymbolicName="Property" ParentNodeId="ns=1;i=5004" NodeId="ns=1;i=6016" BrowseName="1:&lt;Property>" AccessLevel="3">
+        <DisplayName>&lt;Property></DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=2002</Reference>
+            <Reference ReferenceType="HasModellingRule">i=11508</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=5004</Reference>
+        </References>
+    </UAVariable>
+    <UAObject ParentNodeId="ns=1;i=1007" NodeId="ns=1;i=5007" BrowseName="1:Relationships">
+        <DisplayName>Relationships</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="Organizes">ns=1;i=5034</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1007</Reference>
+        </References>
+    </UAObject>
+    <UAObject SymbolicName="Relationship" ParentNodeId="ns=1;i=5007" NodeId="ns=1;i=5034" BrowseName="1:&lt;Relationship>">
+        <DisplayName>&lt;Relationship></DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=1004</Reference>
+            <Reference ReferenceType="HasModellingRule">i=11508</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5035</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=5007</Reference>
+        </References>
+    </UAObject>
+    <UAObject ParentNodeId="ns=1;i=5034" NodeId="ns=1;i=5035" BrowseName="1:Properties">
+        <DisplayName>Properties</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5034</Reference>
+        </References>
+    </UAObject>
+    <UAObject ParentNodeId="ns=1;i=1007" NodeId="ns=1;i=5008" BrowseName="1:Telemetries">
+        <DisplayName>Telemetries</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=61</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="Organizes">ns=1;i=5036</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1007</Reference>
+        </References>
+    </UAObject>
+    <UAObject SymbolicName="Telemetry" ParentNodeId="ns=1;i=5008" NodeId="ns=1;i=5036" BrowseName="1:&lt;Telemetry>">
+        <DisplayName>&lt;Telemetry></DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">ns=1;i=1005</Reference>
+            <Reference ReferenceType="HasModellingRule">i=11508</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6017</Reference>
+            <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=5008</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="NodeId" ParentNodeId="ns=1;i=5036" NodeId="ns=1;i=6017" BrowseName="1:Schema" AccessLevel="3">
+        <DisplayName>Schema</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5036</Reference>
+        </References>
+    </UAVariable>
+    <UAObject SymbolicName="http___unict_org_DTDL_" NodeId="ns=1;i=5037" BrowseName="1:http://unict.org/DTDL/">
+        <DisplayName>http://unict.org/DTDL/</DisplayName>
+        <References>
+            <Reference ReferenceType="HasProperty">ns=1;i=6018</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=11616</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6019</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6020</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6021</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6022</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6023</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6024</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">i=11715</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="Boolean" ParentNodeId="ns=1;i=5037" NodeId="ns=1;i=6018" BrowseName="IsNamespaceSubset">
+        <DisplayName>IsNamespaceSubset</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5037</Reference>
+        </References>
+        <Value>
+            <uax:Boolean>false</uax:Boolean>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="DateTime" ParentNodeId="ns=1;i=5037" NodeId="ns=1;i=6019" BrowseName="NamespacePublicationDate">
+        <DisplayName>NamespacePublicationDate</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5037</Reference>
+        </References>
+        <Value>
+            <uax:DateTime>2023-02-01T11:07:40Z</uax:DateTime>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5037" NodeId="ns=1;i=6020" BrowseName="NamespaceUri">
+        <DisplayName>NamespaceUri</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5037</Reference>
+        </References>
+        <Value>
+            <uax:String>http://unict.org/DTDL/</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5037" NodeId="ns=1;i=6021" BrowseName="NamespaceVersion">
+        <DisplayName>NamespaceVersion</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5037</Reference>
+        </References>
+        <Value>
+            <uax:String>1.0.0</uax:String>
+        </Value>
+    </UAVariable>
+    <UAVariable DataType="IdType" ParentNodeId="ns=1;i=5037" ValueRank="1" NodeId="ns=1;i=6022" ArrayDimensions="0" BrowseName="StaticNodeIdTypes">
+        <DisplayName>StaticNodeIdTypes</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5037</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="NumericRange" ParentNodeId="ns=1;i=5037" ValueRank="1" NodeId="ns=1;i=6023" ArrayDimensions="0" BrowseName="StaticNumericNodeIdRange">
+        <DisplayName>StaticNumericNodeIdRange</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5037</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="String" ParentNodeId="ns=1;i=5037" NodeId="ns=1;i=6024" BrowseName="StaticStringNodeIdPattern">
+        <DisplayName>StaticStringNodeIdPattern</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=5037</Reference>
+        </References>
+    </UAVariable>
+</UANodeSet>

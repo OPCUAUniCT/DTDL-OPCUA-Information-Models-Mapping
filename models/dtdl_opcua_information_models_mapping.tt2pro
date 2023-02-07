@@ -1,0 +1,32 @@
+###########################
+# UaModeler Project File  #
+# Generated at 07.02.2023 #
+###########################
+
+PROJECTNAME = dtdl_opcua_information_models_mapping
+
+TEMPLATESET = ($TEMPLATES)/modeling/v1_0/t0/modeling.tt2set
+
+MODELS += ($MODELS)/Opc.Ua.NodeSet2.ua \
+    ($MODELS)/Opc.Ua.Di.NodeSet2.ua \
+    ($MODELS)/Opc.Ua.PLCopen.NodeSet.ua \
+    dtdl_opcua_information_models_mapping.ua
+
+COLORS = ($MODELS)/Opc.Ua.NodeSet2.ua: #0000ff\
+    ($MODELS)/Opc.Ua.Di.NodeSet2.ua: #0000ff\
+    ($MODELS)/Opc.Ua.PLCopen.NodeSet.ua: #0000ff\
+    dtdl_opcua_information_models_mapping.ua: #008000
+
+OUTPUTPATH = ../Information Model DTDL
+
+GENERATE += dtdl_opcua_information_models_mapping.ua
+
+LOCKEDMODELS += ($MODELS)/Opc.Ua.Di.NodeSet2.ua \
+    ($MODELS)/Opc.Ua.PLCopen.NodeSet.ua
+
+NODEACCESSINFOROLES += Administrator \
+    SecurityAdmin \
+    ConfigurationAdmin \
+    Operator \
+    Observer
+
